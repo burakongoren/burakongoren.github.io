@@ -1,0 +1,39 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    transition: all 0.6s ease;
+  }
+  
+  header {
+    text-align: center;
+    animation: rainbow 5s infinite;
+  }
+  
+  @keyframes rainbow {
+    0% { color: red; }
+    25% { color: yellow; }
+    50% { color: lime; }
+    75% { color: cyan; }
+    100% { color: red; }
+  }
+  
+  #theme-toggle {
+    background: yellow;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    animation: bounce 1s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  
