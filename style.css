@@ -1,21 +1,55 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #000000;
-    margin: 0;
-    padding: 20px;
+/* Custom CSS for animations and effects */
+.hero-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #667eea;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
   }
-  
-  header {
-    text-align: center;
-    margin-bottom: 30px;
+
+  50% {
+    transform: translateY(-10px);
   }
-  
-  #theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 8px 12px;
-    font-size: 14px;
+
+  100% {
+    transform: translateY(0px);
   }
-  
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
